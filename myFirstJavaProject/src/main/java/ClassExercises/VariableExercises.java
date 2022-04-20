@@ -10,10 +10,7 @@ public class VariableExercises
 	
 	public VariableExercises()
 	{
-		int sum1 = 0;
-		int sum2 = 0;
-		double dsum1 = 0;
-		double dsum2 = 0;
+		
 	}
 	
 	public static void main(String[] args)
@@ -107,7 +104,10 @@ public class VariableExercises
 			System.out.println("Your total cost is: $" + total);
 			
 			break;
+			
 		}
+		
+		scan.close();
 	}
 	
 	public int sumInt(int x, int y)
