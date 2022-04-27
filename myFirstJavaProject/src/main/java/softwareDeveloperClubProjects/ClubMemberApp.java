@@ -12,7 +12,11 @@ public class ClubMemberApp {
 		
 		club.menu();
 		
-//		Scanner scan = new Scanner(System.in);
+		
+//		This commented out code was when I was trying to implement the menu method within the main method (club.menu()). I decided to instead put it 
+//		into the SoftwareDeveloperClub class instead as a void method.
+		
+//		Scanner scan = new Scanner(System.in); 
 //		int input;
 //		
 //		System.out.println("Select from the following menu.");
