@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Page</title>
+</head>
+<body>
+    <div>
+        <h1>Register Page</h1>
+    </div>
+
+    <form>
+        <label for="firstname">First Name</label>
+        <input id="firstname" type="text" name="firstname" placeholder="Enter Your First Name" required>
+        <br />
+        <label for="lastname">Last Name</label>
+        <input id="lastname" type="text" name="lastname" placeholder="Enter Your Last Name" required>
+        <br />
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="Enter Your Email" required>
+        <br />
+        <label for="password">Password</label>
+        <input id="password" type="text" name="password" placeholder="Enter Your Password" required>
+        <br />
+        <label for="confirm">Confirm Password</label>
+        <input id="confirm" type="text" name="confirm" placeholder="Confirm Your Password" required>
+        <br />
+        <label for="gender">Gender</label>
+        <input id="female" type="radio" name="gender">
+            <label for="female">Female</label>
+        <input id="male" type="radio" name="gender">
+            <label for="male">Male</label>
+        <br />
+        <label for="date">Date of Birth</label>
+        <input id="date" type="date" name="date" placeholder="mm/dd/yyyy" required>
+        <br />
+        <label for="habits">Habits</label>
+        <input id="sports" type="checkbox" name="habits">
+            <label for="sports">You like sports</label>
+        <input id="eat" type="checkbox" name="habits">
+            <label for="eat">You like to eat</label>
+        <input id="sleep" type="checkbox" name="habits">
+            <label for="sleep">You like to sleep</label>
+        <br />
+        <button>Register</button>
+
+    </form>
+</body>
+</html>
