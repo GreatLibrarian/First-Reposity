@@ -1,0 +1,47 @@
+<!-- <!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shapes Exercise</title>
+</head>
+<body>
+    
+    <div id="box_node">
+        <p>*****<br>*****
+        </p> 
+       </div>
+
+    <script src="./shapes.js" defer></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Intro</title>
+  </head>
+  <body>
+    <div>
+      <h1>Printing Shapes</h1>
+      <input id="width" placeholder="Width" />
+      <input id="height" placeholder="Height" />
+      <button type="submit" onclick="onSubmit()">Sumbit</button>
+      <p id="pa"></p>
+    </div>
+
+    <script>
+      let width = 0;
+      let height = 0;
+
+      function onSubmit() {
+        width = document.getElementById("width").value;
+        height = document.getElementById("height").value;
+        let str = "*".repeat(width);
+        for (let h = 0; h < height; h++) {
+            document.getElementById("pa").append(document.createTextNode(str.substring(h, str.length-h)));
+            document.getElementById("pa").innerHTML += "<br>";
+        }
+      }
+    </script>
+  </body>
+</html>

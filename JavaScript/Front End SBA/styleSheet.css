@@ -1,0 +1,39 @@
+/* Modifies the Header Table of each page */
+.table {
+  border-collapse: collapse;
+  background-color: rgb(200, 200, 200);
+  border: solid 2px black;
+  margin-bottom: 80px;
+  margin-bottom: 100px;
+}
+/* Modifies the High Score Table of the High Scores Page */
+.scoreTable {
+  border-collapse: collapse;
+  font-size: 40px;
+  background-color: rgb(200, 200, 200);
+  border: solid 2px black;
+}
+/* Creates a border between each High Score table column */
+.scoreTable td {
+  border-left: 1px solid black;
+}
+/* Creates a border between each High Score table row */
+.scoreTable tr {
+  border-bottom: 1px solid black;
+}
+
+/* Gives a larger border to the header info of the High Score table */
+#scoreInfo {
+  border-bottom: solid 2px black;
+  border-top: solid 2px black;
+}
+/* Gives a border to the header information of the Header Table */
+#head {
+  border-bottom: solid 2px black;
+  height: 200px;
+}
+
+/* 
+#counter {
+  font-size: 200px;
+} */

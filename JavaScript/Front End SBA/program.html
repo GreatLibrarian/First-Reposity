@@ -1,0 +1,70 @@
+<!-- HTML for the Guessing Game Page -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program</title>
+    <link rel="styleSheet" href="./styleSheet.css" />
+    <style>
+      .submitForm {
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_container">
+      <!-- This table is used to create the header of each page -->
+      <table class="table" style="text-align: center">
+        <thead class="headTable">
+          <tr id="head">
+            <td colspan="1">
+              <img
+                src="https://images.pexels.com/photos/4200743/pexels-photo-4200743.jpeg"
+                height="200px"
+                width="200px"
+              />
+            </td>
+            <td colspan="2" style="font-size: 40px"><h1>Guessing Game</h1></td>
+            <td colspan="1">
+              <img
+                src="https://images.pexels.com/photos/7723748/pexels-photo-7723748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                height="200px"
+                width="200px"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th><a href="./about.html">High Scores</a></th>
+            <th colspan="2"><a href="./index.html">Home</a></th>
+            <th>Guessing Game</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <!-- This form is used to submit your answer for the guessing numbers game -->
+    <form class="submitForm">
+      <label for="number" id="start"></label>
+      <br />
+      <input
+        type="number"
+        id="numberInput"
+        placeholder="Enter your number here"
+        maxlength="2"
+      />
+      <input
+        type="button"
+        id="numberSubmit"
+        value="Submit"
+        onclick="verifyNumber(numberInput.value)"
+      />
+      <label id="answer" style="font-size: 20px"></label>
+    </form>
+    <div>
+      <h1 id="counter" style="font-size: 40px"></h1>
+    </div>
+
+    <script src="./home.js" defer></script>
+  </body>
+</html>

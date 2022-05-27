@@ -1,0 +1,105 @@
+<!-- HTML for the High Scores Page -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="styleSheet" href="./styleSheet.css" />
+  </head>
+  <body>
+    <div class="main_container">
+      <!-- This table is used to create the header of each page -->
+      <table class="table">
+        <thead class="headTable">
+          <tr id="head">
+            <td colspan="1">
+              <img
+                src="https://images.pexels.com/photos/4200743/pexels-photo-4200743.jpeg"
+                height="200px"
+                width="200px"
+              />
+            </td>
+            <td colspan="2" style="font-size: 40px"><h1>High Scores</h1></td>
+            <td colspan="1">
+              <img
+                src="https://images.pexels.com/photos/7723748/pexels-photo-7723748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                height="200px"
+                width="200px"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>High Scores</th>
+            <th colspan="2"><a href="./index.html">Home</a></th>
+            <th><a href="./program.html">Guessing Game</a></th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <div>
+      <h1 style="font-size: 50px">Enter A High Score Here!</h1>
+      <!-- This form is used to create a new high score -->
+      <form>
+        <!-- This piece of code was to be used to require the person to fill all fields before
+        submitting a high score, but since submitting the form reloads the page,
+        and I have no database, I was forced to not use it -->
+        <!-- onsubmit="addPerson(makePerson(nickname.value, score.value, dif.value))" -->
+
+        <label>Nickname</label>
+        <input
+          type="text"
+          id="nickname"
+          placeholder="Enter your 3 letter name"
+          maxlength="3"
+          required
+        />
+        <br />
+        <label>Score</label>
+        <input
+          type="number"
+          id="score"
+          placeholder="Enter your score"
+          required
+        />
+        <br />
+        <label>Difficulty</label>
+        <select name="dif" id="dif" required>
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+        </select>
+        <br />
+        <!-- I originally intended to make this button a submit instead, 
+        but I could not prevent the page from reloading on submission 
+        so I had to make do with this -->
+        <input
+          type="button"
+          value="Submit"
+          onclick="addPerson(makePerson(nickname.value, score.value, dif.value))"
+        />
+      </form>
+    </div>
+
+    <div>
+      <!-- This table contains all of our high scores by descending order of score -->
+      <!-- Note: since the values being compared are not numbers, any value of 10 or higher will be out of order -->
+      <table id="scoreTable" class="scoreTable" style="text-align: center">
+        <tbody id="scoreBody">
+          <tr>
+            <td colspan="3">High Scores</td>
+          </tr>
+          <tr id="scoreInfo">
+            <td width="200px">Name</td>
+            <td width="200px">Score</td>
+            <td width="200px">Difficulty</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="./home.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Intro</title>
+        <!-- css goes here -->
+        <!-- <script src="./index.js" defer></script> -->
+    </head>
+    <body>
+        <div>
+            <h2>JavaScript Intro</h2>
+        </div>
+
+
+        <!-- We want the script tag to load last -->
+        <script src="./index.js" defer>
+            
+            // var nameOne = "String"
+            // var number = 23452
+            // var booleanType = true
+
+            // let nameTwo = 'string'
+            // let numberTwo = 2345.23453
+            // let booleanTypeTwo = true
+
+        </script>
+    </body>
+</html>

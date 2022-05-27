@@ -1,0 +1,79 @@
+<!-- HTML of the Home Page -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="styleSheet" href="./styleSheet.css" />
+  </head>
+  <body>
+    <div class="main_container">
+      <!-- This table is used to create the header of each page -->
+      <table class="table">
+        <thead class="headTable">
+          <tr id="head">
+            <td colspan="1">
+              <img
+                src="https://images.pexels.com/photos/4200743/pexels-photo-4200743.jpeg"
+                height="200px"
+                width="200px"
+              />
+            </td>
+            <td colspan="2" style="font-size: 40px">
+              <h1>Guess My Number!</h1>
+            </td>
+            <td colspan="1">
+              <img
+                src="https://images.pexels.com/photos/7723748/pexels-photo-7723748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                height="200px"
+                width="200px"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th><a href="./about.html">High Scores</a></th>
+            <th colspan="2">Home</th>
+            <th><a href="./program.html">Guessing Game</a></th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <!-- Adding some text to the page -->
+    <div>
+      <h2>Hello!</h2>
+      <p>Welcome to the Home Page of my application!</p>
+      <p>
+        Clicking "High Scores" will direct you to a High Scores Page where you
+        can create new High Scores for the table, and clicking "Guessing Game"
+        will direct you to a game where you guess the right number and try to
+        get ten correct guesses within 3 lives!
+      </p>
+      <p>
+        Originally, I made all three pages linked to each other in some way (ie.
+        Having the home page make the settings for the Guessing Game), but
+        quickly realized that transferring data between different pages with
+        javascript without a database was unfeasible. To replace that, enjoy a
+        dropdown with some silly videos!
+      </p>
+    </div>
+
+    <!-- Creates a dropdown to select different videos -->
+    <label for="dif" style="font-size: 20px">Select a Video!</label>
+    <!-- onchange is used to load a new video whenever the dropdown value changes -->
+    <select name="dif" id="dif" onchange="changeVideo(dif.value)">
+      <option value="0">-None-</option>
+      <option value="1">Meme Video 1</option>
+      <option value="2">Meme Video 2</option>
+      <option value="3">Meme Video 3</option>
+    </select>
+    <!-- This is the video space where the dropdown function changes the video source -->
+    <div>
+      <iframe id="vid" width="1080" height="820"> </iframe>
+    </div>
+
+    <script src="./home.js" defer></script>
+  </body>
+</html>
